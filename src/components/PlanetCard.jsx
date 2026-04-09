@@ -9,18 +9,13 @@ export default function PlanetCard({ planet }) {
             className="planet-card visible animate-in"
             data-name={planet.name}
             data-type={planet.type}
-            style={{
-                backgroundImage: `url(/assets/images/${planet.name}.jpg)`,
-                "--planet-color": planet.color,
-                "--planet-glow": planet.glowColor
-            }}
         >
             <div className="planet-card__inner">
                 <div className="planet-card__image-wrap">
                     <div
                         className="planet-card__planet"
                         style={{
-                            backgroundImage: `url(${planet.image})`
+                            backgroundImage: `url(/src/assets/images/${planet.name}.jpg)`
                         }}
                     />
                     {isVisited && (

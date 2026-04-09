@@ -1,13 +1,13 @@
 /* =============================================================
-   COSMOPEDIA — Design System
-   Space-themed dark UI with glowing accents
+  COSMOPEDIA — Design System
+  Space-themed dark UI with glowing accents
    ============================================================= */
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 /* ───────────────────────────────────────────────────────────────
-   CSS CUSTOM PROPERTIES (Design Tokens)
+  CSS CUSTOM PROPERTIES (Design Tokens)
 ─────────────────────────────────────────────────────────────── */
 :root {
   /* Colors */
@@ -40,7 +40,7 @@
 }
 
 /* ───────────────────────────────────────────────────────────────
-   LIGHT THEME
+  LIGHT THEME
 ─────────────────────────────────────────────────────────────── */
 body.light-theme {
   --space-black: #f0f4ff;
@@ -56,7 +56,7 @@ body.light-theme {
 }
 
 /* ───────────────────────────────────────────────────────────────
-   RESET & BASE
+  RESET & BASE
 ─────────────────────────────────────────────────────────────── */
 *,
 *::before,
@@ -109,7 +109,7 @@ body {
 }
 
 /* ───────────────────────────────────────────────────────────────
-   TYPOGRAPHY
+  TYPOGRAPHY
 ─────────────────────────────────────────────────────────────── */
 h1,
 h2,
@@ -140,8 +140,16 @@ h3 {
   background-clip: text;
 }
 
+/* .planet-card__planet {
+  min-height: 120px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: red;
+} */
+
 /* ───────────────────────────────────────────────────────────────
-   NAVIGATION
+  NAVIGATION
 ─────────────────────────────────────────────────────────────── */
 .navbar {
   position: fixed;
