@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
+import { useAuthContext } from "../context/AuthContext";
 
 export default function Navbar() {
-    const { user, logout } = useAuth();
+    const { user, logout, login } = useAuthContext();
 
     return (
         <nav className="navbar">
@@ -21,7 +21,7 @@ export default function Navbar() {
                         {user.displayName || "Logout"}
                     </button>
                 ) : (
-                    <button className="nav-link">
+                    <button className="nav-link" onClick={login}>
                         🔐 Login with Google
                     </button>
                 )}
