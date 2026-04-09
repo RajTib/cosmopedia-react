@@ -3,6 +3,7 @@ import PlanetCard from "../components/PlanetCard";
 import SolarSystemCanvas from "../components/SolarSystemCanvas";
 
 export default function Home() {
+    console.log(PLANETS)
     return (
         <div className="page page--home">
 
@@ -42,11 +43,11 @@ export default function Home() {
                 <div className="hero__visual">
                     <SolarSystemCanvas />
                 </div>
-
             </section>
 
             {/* PLANETS */}
             <section className="section">
+
                 <div className="section__header">
                     <h2 className="section__title">The Eight Planets</h2>
                     <p className="section__subtitle">
@@ -54,13 +55,35 @@ export default function Home() {
                     </p>
                 </div>
 
+                {/* SEARCH + FILTER (UI only for now) */}
+                <div className="filter-bar">
+
+                    <div className="search-wrapper">
+                        <span className="search-icon">🔍</span>
+                        <input
+                            type="text"
+                            className="search-input"
+                            placeholder="Search planets..."
+                        />
+                    </div>
+
+                    <div className="filter-pills">
+                        <button className="filter-pill active">All</button>
+                        <button className="filter-pill">🪨 Rocky</button>
+                        <button className="filter-pill">💨 Gas Giants</button>
+                        <button className="filter-pill">❄️ Ice Giants</button>
+                    </div>
+
+                </div>
+
+                {/* PLANET GRID */}
                 <div className="planets-grid">
                     {PLANETS.map((planet) => (
                         <PlanetCard key={planet.id} planet={planet} />
                     ))}
                 </div>
-            </section>
 
+            </section>
         </div>
     );
 }

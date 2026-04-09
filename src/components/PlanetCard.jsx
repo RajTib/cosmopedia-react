@@ -10,6 +10,7 @@ export default function PlanetCard({ planet }) {
             data-name={planet.name}
             data-type={planet.type}
             style={{
+                backgroundImage: `url(/assets/images/${planet.name}.jpg)`,
                 "--planet-color": planet.color,
                 "--planet-glow": planet.glowColor
             }}
