@@ -18,7 +18,7 @@ export default function SolarSystemCanvas() {
             ref={canvasRef}
             style={{
                 width: "100%",
-                height: "400px",
+                height: "800px",
             }}
         />
     );

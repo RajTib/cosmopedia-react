@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import Stars from "./components/Stars"
-import SolarSystemCanvas from "./components/SolarSystemCanvas";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";

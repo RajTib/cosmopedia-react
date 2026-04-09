@@ -3,7 +3,7 @@
  * Renders twinkling stars on a canvas behind the content
  */
 
-export class Stars {
+export default class Stars {
   constructor(canvas) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
@@ -89,11 +89,11 @@ export class Stars {
     this.shootingStars.forEach(s => {
       const ex = s.x + Math.cos(s.angle) * s.len;
       const ey = s.y + Math.sin(s.angle) * s.len;
-      
+
       const grad = ctx.createLinearGradient(s.x, s.y, ex, ey);
       grad.addColorStop(0, `rgba(255,255,255,0)`);
       grad.addColorStop(1, `rgba(255,255,255,${s.alpha})`);
-      
+
       ctx.beginPath();
       ctx.moveTo(s.x, s.y);
       ctx.lineTo(ex, ey);

@@ -6,20 +6,43 @@ export default function Home() {
     return (
         <div className="page page--home">
 
-            {/* HERO (you were missing this completely) */}
             <section className="hero">
+
+                {/* LEFT SIDE */}
                 <div className="hero__content">
+
+                    <div className="hero__eyebrow">
+                        • SOLAR SYSTEM ENCYCLOPEDIA
+                    </div>
+
                     <h1 className="hero__title">
-                        Explore the <span className="gradient-text">Cosmos</span>
+                        Explore the <br />
+                        <span className="gradient-text">Cosmos</span>
                     </h1>
+
                     <p className="hero__subtitle">
-                        Journey through our solar system.
+                        Journey through our solar system. Discover facts, listen to narrations,
+                        compare planets, and explore the universe like never before.
                     </p>
+
+                    {/* 🔥 BUTTONS (YOU WERE MISSING THIS) */}
+                    <div className="hero__actions">
+                        <button className="btn btn--primary">
+                            🚀 Start Exploring
+                        </button>
+
+                        <button className="btn btn--outline">
+                            🪐 Solar System View
+                        </button>
+                    </div>
+
                 </div>
 
-                <div className="hero_visual">
+                {/* RIGHT SIDE */}
+                <div className="hero__visual">
                     <SolarSystemCanvas />
                 </div>
+
             </section>
 
             {/* PLANETS */}
