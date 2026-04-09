@@ -1,5 +1,6 @@
 import { PLANETS } from "../data/planets";
 import PlanetCard from "../components/PlanetCard";
+import SolarSystemCanvas from "../components/SolarSystemCanvas";
 
 export default function Home() {
     return (
@@ -14,6 +15,10 @@ export default function Home() {
                     <p className="hero__subtitle">
                         Journey through our solar system.
                     </p>
+                </div>
+
+                <div className="hero_visual">
+                    <SolarSystemCanvas />
                 </div>
             </section>
 
