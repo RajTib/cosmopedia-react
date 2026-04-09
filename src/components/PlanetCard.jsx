@@ -6,7 +6,7 @@ export default function PlanetCard({ planet }) {
 
     return (
         <div
-            className="planet-card animate-in"
+            className="planet-card visible animate-in"
             data-name={planet.name}
             data-type={planet.type}
             style={{
