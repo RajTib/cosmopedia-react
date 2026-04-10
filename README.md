@@ -1,38 +1,38 @@
-# 🚀 COSMOPEDIA — Interactive Solar System Explorer
+# COSMOPEDIA — Interactive Solar System Explorer
 
 An immersive, interactive **Solar System Encyclopedia** built with **React + Vite**.
 Explore planets, compare stats, listen to narrations, and interact with a dynamic solar system — all in one place.
 
-> 🌌 Futuristic space UI with smooth animations and clean design.
+> Futuristic space UI with smooth animations and clean design.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🌍 Core Experience
-- 🪐 Explore all 8 planets with rich visuals
-- 🔎 Search & filter planets instantly
-- 📄 Detailed planet pages with stats & descriptions
+### Core Experience
+- Explore all 8 planets with rich visuals
+- Search & filter planets instantly
+- Detailed planet pages with stats & descriptions
 
-### 🌌 Interactive Elements
-- 🌞 Interactive Solar System (canvas-based)
-- 🖱️ Click planets to navigate
-- 🎧 Audio narration for each planet
+### Interactive Elements
+- Interactive Solar System (canvas-based)
+- Click planets to navigate
+- Audio narration for each planet
 
-### ⚖️ Comparison & Personalization
-- ⚖️ Compare two planets side-by-side
-- ⭐ Add/remove favorites
-- 💾 Favorites stored using LocalStorage
+### Comparison & Personalization
+- Compare two planets side-by-side
+- Add/remove favorites
+- Favorites stored using LocalStorage
 
-### 🎨 UI/UX
-- 🌑 Dark space-themed design
-- ✨ Glow effects & gradients
-- 📱 Responsive layout
-- 🧩 Modular React components
+### UI/UX
+- Dark space-themed design
+- Glow effects & gradients
+- Responsive layout
+- Modular React components
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1️⃣ Clone the repo
 ```bash
@@ -52,24 +52,24 @@ npm run dev
 
 ## 📸 Screenshots
 
-### 🌌 Home Page
+### Home Page
 ![Home](./screenshots/home.png)
 
-### 🪐 Explore Page
+### Explore Page
 ![Explore](./screenshots/explore.png)
 
-### 🌍 Solar System
+### Solar System
 ![Planet](./screenshots/solar-system.png)
 
-### ⚖️ Comparison Tool
+### Comparison Tool
 ![Compare](./screenshots/compare.png)
 
-### ⭐ Favorites Page
+### Favorites Page
 ![Favorites](./screenshots/favorites.png)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology        | Usage                  |
 | ----------------- | ---------------------- |
@@ -82,19 +82,19 @@ npm run dev
 
 ---
 
-## 🎨 Design Highlights
+## Design Highlights
 
-- 🌌 Space-inspired dark theme
-- 💡 Glow effects for planets
-- 🧱 Clean card-based layout
-- 🎯 Interactive orbital system
-- 🎧 Styled audio player
+- Space-inspired dark theme
+- Glow effects for planets
+- Clean card-based layout
+- Interactive orbital system
+- Styled audio player
 
 ---
 
 ## 👤 Author
 
-Made with 🚀 by **Raj**
+Made by **Raj**
 
 ---
 
