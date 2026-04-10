@@ -1,5 +1,54 @@
 import { useParams } from "react-router-dom";
 import { PLANETS } from "../data/planets";
+import { useRef, useState } from "react";
+
+function AudioPlayer({ src, name }) {
+    const audioRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const togglePlay = () => {
+        if (!audioRef.current) return;
+
+        if (isPlaying) {
+            audioRef.current.pause();
+        } else {
+            audioRef.current.play();
+        }
+
+        setIsPlaying(!isPlaying);
+    };
+
+    return (
+        <div className={`audio-player ${isPlaying ? "is-playing" : ""}`}>
+
+            <div className="audio-player__header">
+                <span className="audio-player__icon">🔊</span>
+                <span className="audio-player__title">
+                    {name} — Audio Narration
+                </span>
+                <span className="audio-player__badge">NARRATION</span>
+            </div>
+
+            <div className="audio-player__controls">
+                <button className="audio-btn" onClick={() => audioRef.current.currentTime -= 10}>
+                    ⏪
+                </button>
+
+                <button className="audio-btn audio-btn--play" onClick={togglePlay}>
+                    {isPlaying ? "⏸" : "▶"}
+                </button>
+
+                <button className="audio-btn" onClick={() => audioRef.current.currentTime += 10}>
+                    ⏩
+                </button>
+            </div>
+
+            {/* Hidden actual audio */}
+            <audio ref={audioRef} src={`/${src}`} />
+
+        </div>
+    );
+}
 
 export default function PlanetPage() {
     const { id } = useParams();
@@ -105,11 +154,10 @@ export default function PlanetPage() {
             <section className="section">
                 <h2 className="section__title">🔊 Audio Narration</h2>
 
-                <div className="audio-player">
-                    <audio controls style={{ width: "100%" }}>
-                        <source src={`/${planet.audio}`} type="audio/mp3" />
-                    </audio>
-                </div>
+                <AudioPlayer
+                    src={planet.audio}
+                    name={planet.name}
+                />
             </section>
 
             {/* CTA */}
