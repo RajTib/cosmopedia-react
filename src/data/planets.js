@@ -11,7 +11,7 @@ export const PLANETS = [
     tagline: "The Scorched Messenger",
     color: "#b5a09a",
     glowColor: "#c8a882",
-    image: "images/Mercury.jpg",
+    image: "images/Mercury.png",
     audio: "audios/mercury.mp3",
     description: `Mercury is the smallest and innermost planet in the Solar System.
     Despite being closest to the Sun, it is not the hottest planet — that title belongs
@@ -46,7 +46,7 @@ export const PLANETS = [
     tagline: "The Veiled Inferno",
     color: "#e8c56a",
     glowColor: "#f0a050",
-    image: "images/Venus.jpg",
+    image: "images/Venus.png",
     audio: "assets/audios/venus.mp3",
     description: `Venus is the second planet from the Sun and the hottest planet in
     our solar system, despite not being the closest to the Sun. Its thick atmosphere
@@ -81,7 +81,7 @@ export const PLANETS = [
     tagline: "The Blue Marble",
     color: "#4a9eff",
     glowColor: "#3eca7a",
-    image: "images/Earth.jpg",
+    image: "images/Earth.png",
     audio: "assets/audios/earth.mp3",
     description: `Earth is the third planet from the Sun and the only known planet
     to harbor life. With its liquid water, breathable atmosphere, and protective
@@ -116,7 +116,7 @@ export const PLANETS = [
     tagline: "The Red Planet",
     color: "#cf4e2a",
     glowColor: "#e05a2b",
-    image: "images/Mars.jpg",
+    image: "images/Mars.png",
     audio: "assets/audios/mars.mp3",
     description: `Mars is the fourth planet from the Sun and the second-smallest
     planet in the Solar System. Often called the Red Planet due to its reddish
@@ -151,7 +151,7 @@ export const PLANETS = [
     tagline: "The Great Giant",
     color: "#c88b4a",
     glowColor: "#d4784a",
-    image: "images/Jupiter.jpg",
+    image: "images/Jupiter.png",
     audio: "assets/audios/jupiter.mp3",
     description: `Jupiter is the fifth planet from the Sun and the largest planet
     in the Solar System. It is a gas giant with a mass more than twice that of all
@@ -186,7 +186,7 @@ export const PLANETS = [
     tagline: "Lord of the Rings",
     color: "#e8d5a0",
     glowColor: "#d4b870",
-    image: "images/Saturn.jpg",
+    image: "images/Saturn.png",
     audio: "assets/audios/saturn.mp3",
     description: `Saturn is the sixth planet from the Sun and the second-largest
     in the Solar System. It is a gas giant with an average radius of about nine
@@ -221,7 +221,7 @@ export const PLANETS = [
     tagline: "The Tilted World",
     color: "#7de8e8",
     glowColor: "#5bc8d0",
-    image: "images/Uranus.jpg",
+    image: "images/Uranus.png",
     audio: "assets/audios/uranus.mp3",
     description: `Uranus is the seventh planet from the Sun. It is an ice giant
     with the third-largest planetary radius and fourth-largest planetary mass in
@@ -256,7 +256,7 @@ export const PLANETS = [
     tagline: "The Stormy Deep",
     color: "#3a6fd8",
     glowColor: "#4488f0",
-    image: "images/Neptune.jpg",
+    image: "images/Neptune.png",
     audio: "assets/audios/neptune.mp3",
     description: `Neptune is the eighth and farthest known Solar planet from the
     Sun. It is the fourth-largest planet by diameter, the third-most-massive planet,

@@ -18,7 +18,7 @@ export default function PlanetCard({ planet }) {
                     <div
                         className="planet-card__planet"
                         style={{
-                            backgroundImage: `url(/images/${planet.name}.jpg)`
+                            backgroundImage: `url(/images/${planet.name}.png)`
                         }}
                     />
                     {isVisited && (
