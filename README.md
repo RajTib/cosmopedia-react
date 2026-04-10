@@ -1,16 +1,167 @@
-# React + Vite
+# 🚀 COSMOPEDIA — Interactive Solar System Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An immersive, interactive **Solar System Encyclopedia** built with **React + Vite**.
+Explore planets, compare stats, listen to narrations, and interact with a dynamic solar system — all in one place.
 
-Currently, two official plugins are available:
+> 🌌 Futuristic space UI with smooth animations and clean design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🌍 Core Experience
+- 🪐 Explore all 8 planets with rich visuals
+- 🔎 Search & filter planets instantly
+- 📄 Detailed planet pages with stats & descriptions
 
-## Expanding the ESLint configuration
+### 🌌 Interactive Elements
+- 🌞 Interactive Solar System (canvas-based)
+- 🖱️ Click planets to navigate
+- 🎧 Audio narration for each planet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ⚖️ Comparison & Personalization
+- ⚖️ Compare two planets side-by-side
+- ⭐ Add/remove favorites
+- 💾 Favorites stored using LocalStorage
+
+### 🎨 UI/UX
+- 🌑 Dark space-themed design
+- ✨ Glow effects & gradients
+- 📱 Responsive layout
+- 🧩 Modular React components
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/YOUR_USERNAME/cosmopedia.git
+cd cosmopedia
+```
+
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
+
+### 3️⃣ Run the app
+```bash
+npm run dev
+```
+
+## 📸 Screenshots
+
+### 🌌 Home Page
+![Home](./screenshots/home.png)
+
+### 🪐 Explore Page
+![Explore](./screenshots/explore.png)
+
+### 🌍 Planet Page
+![Planet](./screenshots/planet.png)
+
+### ⚖️ Comparison Tool
+![Compare](./screenshots/compare.png)
+
+### ⭐ Favorites Page
+![Favorites](./screenshots/favorites.png)
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology        | Usage                  |
+| ----------------- | ---------------------- |
+| React (Vite)      | Frontend framework     |
+| React Router      | Routing                |
+| CSS3              | Styling & animations   |
+| HTML5 Canvas      | Solar system rendering |
+| JavaScript (ES6+) | Logic                  |
+| LocalStorage      | Favorites persistence  |
+
+---
+
+## 🎨 Design Highlights
+
+- 🌌 Space-inspired dark theme
+- 💡 Glow effects for planets
+- 🧱 Clean card-based layout
+- 🎯 Interactive orbital system
+- 🎧 Styled audio player
+
+---
+
+## 📁 Project Structure
+## 📸 Screenshots
+
+### 🌌 Home Page
+![Home](./screenshots/home.png)
+
+### 🪐 Explore Page
+![Explore](./screenshots/explore.png)
+
+### 🌍 Planet Page
+![Planet](./screenshots/planet.png)
+
+### ⚖️ Comparison Tool
+![Compare](./screenshots/compare.png)
+
+### ⭐ Favorites Page
+![Favorites](./screenshots/favorites.png)
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology        | Usage                  |
+| ----------------- | ---------------------- |
+| React (Vite)      | Frontend framework     |
+| React Router      | Routing                |
+| CSS3              | Styling & animations   |
+| HTML5 Canvas      | Solar system rendering |
+| JavaScript (ES6+) | Logic                  |
+| LocalStorage      | Favorites persistence  |
+
+---
+
+## 🎨 Design Highlights
+
+- 🌌 Space-inspired dark theme
+- 💡 Glow effects for planets
+- 🧱 Clean card-based layout
+- 🎯 Interactive orbital system
+- 🎧 Styled audio player
+
+---
+
+## 📁 Project Structure
+cosmopedia-react/
+├── public/
+│ ├── images/
+│ ├── audios/
+│
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── data/
+│ ├── context/
+│ ├── styles/
+│ ├── App.jsx
+│ ├── main.jsx
+│
+├── index.html
+├── package.json
+└── README.md
+
+---
+
+## 👤 Author
+
+Made with 🚀 by **Raj**
+
+---
+
+## 📄 License
+
+This project is open source under the **MIT License**
