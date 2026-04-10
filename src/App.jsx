@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import PlanetPage from "./pages/PlanetPage";
 import SolarSystem from "./pages/SolarSystem";
+import Compare from "./pages/Compare";
+import Explore from "./pages/Explore";
 import "./styles/main.css"
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/planet/:id" element={<PlanetPage />} />
         <Route path="/solar-system" element={<SolarSystem />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/compare" element={<Compare />} />
       </Routes>
 
       <Footer />
