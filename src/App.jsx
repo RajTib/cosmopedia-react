@@ -8,6 +8,7 @@ import PlanetPage from "./pages/PlanetPage";
 import SolarSystem from "./pages/SolarSystem";
 import Compare from "./pages/Compare";
 import Explore from "./pages/Explore";
+import Favorites from "./pages/Favourites";
 import "./styles/main.css"
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/solar-system" element={<SolarSystem />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/compare" element={<Compare />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
 
       <Footer />
