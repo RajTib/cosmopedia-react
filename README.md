@@ -58,8 +58,8 @@ npm run dev
 ### 🪐 Explore Page
 ![Explore](./screenshots/explore.png)
 
-### 🌍 Planet Page
-![Planet](./screenshots/planet.png)
+### 🌍 Solar System
+![Planet](./screenshots/solar-system.png)
 
 ### ⚖️ Comparison Tool
 ![Compare](./screenshots/compare.png)
