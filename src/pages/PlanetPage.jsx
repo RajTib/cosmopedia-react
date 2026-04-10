@@ -8,41 +8,121 @@ export default function PlanetPage() {
     if (!planet) return <h2>Planet not found</h2>;
 
     return (
-        <div className="planet-page">
+        <div
+            className="planet-page"
+            style={{
+                "--planet-color": planet.color,
+                "--planet-glow": planet.glowColor
+            }}
+        >
 
             {/* HERO */}
             <section className="planet-hero">
-                <div className="planet-hero__content">
-                    <h1>{planet.name}</h1>
-                    <p>{planet.tagline}</p>
+
+                {/* LEFT */}
+                <div className="planet-hero__left">
+
+                    <p className="planet-hero__eyebrow">
+                        {planet.type.toUpperCase()} PLANET
+                    </p>
+
+                    <h1 className="planet-hero__title">
+                        {planet.name}
+                    </h1>
+
+                    <p className="planet-hero__tagline">
+                        {planet.tagline}
+                    </p>
+
+                    <p className="planet-hero__desc">
+                        {planet.description}
+                    </p>
+
+                    <div className="planet-hero__actions">
+                        <button className="btn btn--primary">
+                            🔊 Listen to Narration
+                        </button>
+
+                        <button className="btn btn--outline">
+                            ⭐ Add to Favorites
+                        </button>
+                    </div>
+
+                    <div className="fun-fact-box">
+                        <span className="fun-fact-icon">💡</span>
+                        <p>{planet.funFact}</p>
+                    </div>
+
                 </div>
 
-                <div
-                    className="planet-hero__image"
-                    style={{
-                        backgroundImage: `url(/${planet.image})`
-                    }}
-                />
+                {/* RIGHT (PLANET) */}
+                <div className="planet-hero__right">
+
+                    <div
+                        className="planet-display"
+                        style={{
+                            backgroundImage: `url(/${planet.image})`
+                        }}
+                    >
+                        <div className="planet-display__glow"></div>
+                    </div>
+
+                </div>
+
             </section>
 
-            {/* DETAILS */}
-            <section className="planet-details">
-                <div className="planet-stats">
+            {/* STATS */}
+            <section className="section">
+                <h2 className="section__title">Planetary Statistics</h2>
+
+                <div className="stats-grid">
                     {Object.entries(planet.stats).map(([key, value]) => (
-                        <div className="stat" key={key}>
-                            <strong>{key}:</strong> {value}
+                        <div className="stat-card" key={key}>
+                            <p className="stat-card__label">{key}</p>
+                            <p className="stat-card__value">{value}</p>
                         </div>
                     ))}
                 </div>
+            </section>
 
-                <p className="planet-description">
-                    {planet.description || "No description yet"}
-                </p>
+            {/* FACTS */}
+            <section className="section">
+                <h2 className="section__title">Key Facts</h2>
 
-                <div className="planet-fun-fact">
-                    {planet.funFact}
+                <div className="facts-list">
+                    {planet.facts.map((fact, i) => (
+                        <div className="fact-item visible" key={i}>
+                            <span className="fact-number">
+                                {String(i + 1).padStart(2, "0")}
+                            </span>
+                            <p className="fact-text">{fact}</p>
+                        </div>
+                    ))}
                 </div>
+            </section>
 
+            {/* AUDIO */}
+            <section className="section">
+                <h2 className="section__title">🔊 Audio Narration</h2>
+
+                <div className="audio-player">
+                    <audio controls style={{ width: "100%" }}>
+                        <source src={`/${planet.audio}`} type="audio/mp3" />
+                    </audio>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="compare-cta">
+                <div className="compare-cta__inner">
+                    <h2>
+                        Want to compare {planet.name} with other planets?
+                    </h2>
+
+                    <a href="/compare" className="btn btn--primary">
+                        ⚖️ Open Comparison Tool
+                    </a>
+                </div>
             </section>
 
         </div>
