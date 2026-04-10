@@ -1,15 +1,35 @@
 import { PLANETS } from "../data/planets";
 import PlanetCard from "../components/PlanetCard";
 import SolarSystemCanvas from "../components/SolarSystemCanvas";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-    console.log(PLANETS)
+
+    // 🔥 STATE
+    const [search, setSearch] = useState("");
+    const [filter, setFilter] = useState("all");
+    const navigate = useNavigate();
+
+    // 🔥 FILTER LOGIC
+    const filteredPlanets = PLANETS.filter((planet) => {
+        const matchesSearch = planet.name
+            .toLowerCase()
+            .includes(search.toLowerCase());
+
+        const matchesFilter =
+            filter === "all" || planet.type === filter;
+
+        return matchesSearch && matchesFilter;
+    });
+
     return (
         <div className="page page--home">
 
+            {/* HERO */}
             <section className="hero">
 
-                {/* LEFT SIDE */}
+                {/* LEFT */}
                 <div className="hero__content">
 
                     <div className="hero__eyebrow">
@@ -26,27 +46,40 @@ export default function Home() {
                         compare planets, and explore the universe like never before.
                     </p>
 
-                    {/* 🔥 BUTTONS (YOU WERE MISSING THIS) */}
+                    {/* ✅ WORKING BUTTONS */}
                     <div className="hero__actions">
-                        <button className="btn btn--primary">
+
+                        <button
+                            className="btn btn--primary"
+                            onClick={() => {
+                                document.getElementById("planets").scrollIntoView({
+                                    behavior: "smooth",
+                                });
+                            }}
+                        >
                             🚀 Start Exploring
                         </button>
 
-                        <button className="btn btn--outline">
+                        <button
+                            className="btn btn--outline"
+                            onClick={() => navigate("/solar-system")}
+                        >
                             🪐 Solar System View
                         </button>
+
                     </div>
 
                 </div>
 
-                {/* RIGHT SIDE */}
-                <div className="hero__visual">
+                {/* RIGHT */}
+                <div className="hero__visual" id="solar">
                     <SolarSystemCanvas />
                 </div>
+
             </section>
 
             {/* PLANETS */}
-            <section className="section">
+            <section className="section" id="planets">
 
                 <div className="section__header">
                     <h2 className="section__title">The Eight Planets</h2>
@@ -55,7 +88,7 @@ export default function Home() {
                     </p>
                 </div>
 
-                {/* SEARCH + FILTER (UI only for now) */}
+                {/* 🔍 SEARCH + FILTER */}
                 <div className="filter-bar">
 
                     <div className="search-wrapper">
@@ -64,26 +97,54 @@ export default function Home() {
                             type="text"
                             className="search-input"
                             placeholder="Search planets..."
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
                         />
                     </div>
 
                     <div className="filter-pills">
-                        <button className="filter-pill active">All</button>
-                        <button className="filter-pill">🪨 Rocky</button>
-                        <button className="filter-pill">💨 Gas Giants</button>
-                        <button className="filter-pill">❄️ Ice Giants</button>
+
+                        <button
+                            className={`filter-pill ${filter === "all" ? "active" : ""}`}
+                            onClick={() => setFilter("all")}
+                        >
+                            All
+                        </button>
+
+                        <button
+                            className={`filter-pill ${filter === "rocky" ? "active" : ""}`}
+                            onClick={() => setFilter("rocky")}
+                        >
+                            🪨 Rocky
+                        </button>
+
+                        <button
+                            className={`filter-pill ${filter === "gas_giant" ? "active" : ""}`}
+                            onClick={() => setFilter("gas_giant")}
+                        >
+                            💨 Gas Giants
+                        </button>
+
+                        <button
+                            className={`filter-pill ${filter === "ice_giant" ? "active" : ""}`}
+                            onClick={() => setFilter("ice_giant")}
+                        >
+                            ❄️ Ice Giants
+                        </button>
+
                     </div>
 
                 </div>
 
-                {/* PLANET GRID */}
+                {/* 🌍 PLANETS GRID */}
                 <div className="planets-grid">
-                    {PLANETS.map((planet) => (
+                    {filteredPlanets.map((planet) => (
                         <PlanetCard key={planet.id} planet={planet} />
                     ))}
                 </div>
 
             </section>
+
         </div>
     );
 }

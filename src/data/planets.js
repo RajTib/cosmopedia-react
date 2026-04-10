@@ -11,11 +11,11 @@ export const PLANETS = [
     tagline: "The Scorched Messenger",
     color: "#b5a09a",
     glowColor: "#c8a882",
-    image: "assets/images/Mercury.jpg",
-    audio: "assets/audios/mercury.mp3",
-    description: `Mercury is the smallest and innermost planet in the Solar System. 
-    Despite being closest to the Sun, it is not the hottest planet — that title belongs 
-    to Venus. Mercury has no significant atmosphere to retain heat, causing dramatic 
+    image: "images/Mercury.jpg",
+    audio: "audios/mercury.mp3",
+    description: `Mercury is the smallest and innermost planet in the Solar System.
+    Despite being closest to the Sun, it is not the hottest planet — that title belongs
+    to Venus. Mercury has no significant atmosphere to retain heat, causing dramatic
     temperature swings between day and night.`,
     funFact: "A year on Mercury lasts only 88 Earth days, but a day lasts 59 Earth days.",
     stats: {
@@ -48,9 +48,9 @@ export const PLANETS = [
     glowColor: "#f0a050",
     image: "assets/images/Venus.jpg",
     audio: "assets/audios/venus.mp3",
-    description: `Venus is the second planet from the Sun and the hottest planet in 
-    our solar system, despite not being the closest to the Sun. Its thick atmosphere 
-    traps heat in a runaway greenhouse effect. Venus rotates in the opposite direction 
+    description: `Venus is the second planet from the Sun and the hottest planet in
+    our solar system, despite not being the closest to the Sun. Its thick atmosphere
+    traps heat in a runaway greenhouse effect. Venus rotates in the opposite direction
     to most planets and very slowly.`,
     funFact: "Venus rotates so slowly that a day on Venus is longer than its year.",
     stats: {
@@ -83,9 +83,9 @@ export const PLANETS = [
     glowColor: "#3eca7a",
     image: "assets/images/Earth.jpg",
     audio: "assets/audios/earth.mp3",
-    description: `Earth is the third planet from the Sun and the only known planet 
-    to harbor life. With its liquid water, breathable atmosphere, and protective 
-    magnetic field, Earth is uniquely suited for life. It is the densest planet in 
+    description: `Earth is the third planet from the Sun and the only known planet
+    to harbor life. With its liquid water, breathable atmosphere, and protective
+    magnetic field, Earth is uniquely suited for life. It is the densest planet in
     the Solar System and the largest of the four terrestrial planets.`,
     funFact: "Earth is the only planet not named after a Greek or Roman deity.",
     stats: {
@@ -118,9 +118,9 @@ export const PLANETS = [
     glowColor: "#e05a2b",
     image: "assets/images/Mars.jpg",
     audio: "assets/audios/mars.mp3",
-    description: `Mars is the fourth planet from the Sun and the second-smallest 
-    planet in the Solar System. Often called the Red Planet due to its reddish 
-    appearance caused by iron oxide on its surface. Mars has the tallest volcano 
+    description: `Mars is the fourth planet from the Sun and the second-smallest
+    planet in the Solar System. Often called the Red Planet due to its reddish
+    appearance caused by iron oxide on its surface. Mars has the tallest volcano
     and the longest canyon in the solar system.`,
     funFact: "Olympus Mons on Mars is the tallest volcano in the solar system — nearly 3x the height of Everest.",
     stats: {
@@ -153,9 +153,9 @@ export const PLANETS = [
     glowColor: "#d4784a",
     image: "assets/images/Jupiter.jpg",
     audio: "assets/audios/jupiter.mp3",
-    description: `Jupiter is the fifth planet from the Sun and the largest planet 
-    in the Solar System. It is a gas giant with a mass more than twice that of all 
-    other planets combined. Jupiter's iconic Great Red Spot is a persistent 
+    description: `Jupiter is the fifth planet from the Sun and the largest planet
+    in the Solar System. It is a gas giant with a mass more than twice that of all
+    other planets combined. Jupiter's iconic Great Red Spot is a persistent
     anticyclonic storm larger than Earth.`,
     funFact: "Jupiter's Great Red Spot is a storm that has been raging for over 350 years.",
     stats: {
@@ -188,9 +188,9 @@ export const PLANETS = [
     glowColor: "#d4b870",
     image: "assets/images/Saturn.jpg",
     audio: "assets/audios/saturn.mp3",
-    description: `Saturn is the sixth planet from the Sun and the second-largest 
-    in the Solar System. It is a gas giant with an average radius of about nine 
-    and a half times that of Earth. Saturn is known for its spectacular ring system, 
+    description: `Saturn is the sixth planet from the Sun and the second-largest
+    in the Solar System. It is a gas giant with an average radius of about nine
+    and a half times that of Earth. Saturn is known for its spectacular ring system,
     which consists of ice and rock particles.`,
     funFact: "Saturn is so light it could float on water — it's the least dense planet in the solar system.",
     stats: {
@@ -223,9 +223,9 @@ export const PLANETS = [
     glowColor: "#5bc8d0",
     image: "assets/images/Uranus.jpg",
     audio: "assets/audios/uranus.mp3",
-    description: `Uranus is the seventh planet from the Sun. It is an ice giant 
-    with the third-largest planetary radius and fourth-largest planetary mass in 
-    the Solar System. Uranus is unique in that it rotates on its side, with an 
+    description: `Uranus is the seventh planet from the Sun. It is an ice giant
+    with the third-largest planetary radius and fourth-largest planetary mass in
+    the Solar System. Uranus is unique in that it rotates on its side, with an
     axial tilt of about 98 degrees.`,
     funFact: "Uranus rotates on its side — its axis is tilted 98 degrees, so it essentially rolls around the Sun.",
     stats: {
@@ -258,9 +258,9 @@ export const PLANETS = [
     glowColor: "#4488f0",
     image: "assets/images/Neptune.jpg",
     audio: "assets/audios/neptune.mp3",
-    description: `Neptune is the eighth and farthest known Solar planet from the 
-    Sun. It is the fourth-largest planet by diameter, the third-most-massive planet, 
-    and the densest giant planet. Neptune has the strongest winds in the Solar System, 
+    description: `Neptune is the eighth and farthest known Solar planet from the
+    Sun. It is the fourth-largest planet by diameter, the third-most-massive planet,
+    and the densest giant planet. Neptune has the strongest winds in the Solar System,
     reaching speeds of 2,100 km/h.`,
     funFact: "Neptune's largest moon, Triton, orbits backwards and is slowly spiraling inward — it will eventually be torn apart.",
     stats: {

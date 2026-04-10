@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
 import { SolarSystem } from "./SolarSystem";
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate;
 
 export default function SolarSystemCanvas() {
     const canvasRef = useRef(null);

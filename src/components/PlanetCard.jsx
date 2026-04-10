@@ -1,12 +1,15 @@
 import { storage } from "../utils/storage";
+import { useNavigate } from "react-router-dom";
 
 export default function PlanetCard({ planet }) {
     const isFav = storage.isFavorite(planet.id);
     const isVisited = storage.getVisited().includes(planet.id);
+    const navigate = useNavigate();
 
     return (
         <div
             className="planet-card visible animate-in"
+            onClick={() => navigate(`/planet/${planet.id}`)}
             data-name={planet.name}
             data-type={planet.type}
         >
@@ -15,7 +18,7 @@ export default function PlanetCard({ planet }) {
                     <div
                         className="planet-card__planet"
                         style={{
-                            backgroundImage: `url(/src/assets/images/${planet.name}.jpg)`
+                            backgroundImage: `url(/images/${planet.name}.jpg)`
                         }}
                     />
                     {isVisited && (

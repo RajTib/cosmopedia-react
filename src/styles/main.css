@@ -1415,6 +1415,14 @@ h3 {
   opacity: 1;
 }
 
+.planet-hero__image {
+  width: 320px;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
 /* ───────────────────────────────────────────────────────────────
    AUDIO PLAYER
 ─────────────────────────────────────────────────────────────── */

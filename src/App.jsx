@@ -1,9 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import Stars from "./components/Stars"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import PlanetPage from "./pages/PlanetPage";
+import SolarSystem from "./pages/SolarSystem";
 import "./styles/main.css"
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/planet/:id" element={<PlanetPage />} />
+        <Route path="/solar-system" element={<SolarSystem />} />
       </Routes>
 
       <Footer />
