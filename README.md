@@ -36,7 +36,7 @@ Explore planets, compare stats, listen to narrations, and interact with a dynami
 
 ### 1️⃣ Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/cosmopedia.git
+git clone https://github.com/RajTib/cosmopedia.git
 cd cosmopedia
 ```
 
