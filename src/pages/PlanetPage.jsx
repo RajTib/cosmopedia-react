@@ -1,18 +1,18 @@
 import { useParams } from "react-router-dom";
 import { PLANETS } from "../data/planets";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, forwardRef } from "react";
 
-function AudioPlayer({ src, name }) {
-    const audioRef = useRef(null);
+/* ================= AUDIO PLAYER ================= */
+const AudioPlayer = forwardRef(({ src, name }, ref) => {
     const [isPlaying, setIsPlaying] = useState(false);
 
     const togglePlay = () => {
-        if (!audioRef.current) return;
+        if (!ref.current) return;
 
         if (isPlaying) {
-            audioRef.current.pause();
+            ref.current.pause();
         } else {
-            audioRef.current.play();
+            ref.current.play();
         }
 
         setIsPlaying(!isPlaying);
@@ -30,29 +30,61 @@ function AudioPlayer({ src, name }) {
             </div>
 
             <div className="audio-player__controls">
-                <button className="audio-btn" onClick={() => audioRef.current.currentTime -= 10}>
+                <button
+                    className="audio-btn"
+                    onClick={() => ref.current.currentTime -= 10}
+                >
                     ⏪
                 </button>
 
-                <button className="audio-btn audio-btn--play" onClick={togglePlay}>
+                <button
+                    className="audio-btn audio-btn--play"
+                    onClick={togglePlay}
+                >
                     {isPlaying ? "⏸" : "▶"}
                 </button>
 
-                <button className="audio-btn" onClick={() => audioRef.current.currentTime += 10}>
+                <button
+                    className="audio-btn"
+                    onClick={() => ref.current.currentTime += 10}
+                >
                     ⏩
                 </button>
             </div>
 
-            {/* Hidden actual audio */}
-            <audio ref={audioRef} src={`/${src}`} />
-
+            <audio ref={ref} src={`/${src}`} />
         </div>
     );
-}
+});
 
+/* ================= MAIN PAGE ================= */
 export default function PlanetPage() {
     const { id } = useParams();
     const planet = PLANETS.find(p => p.id === id);
+
+    const audioRef = useRef(null);
+
+    const [isFav, setIsFav] = useState(false);
+
+    /* ================= FAVORITES ================= */
+    useEffect(() => {
+        const favs = JSON.parse(localStorage.getItem("favorites")) || [];
+        setIsFav(favs.includes(planet?.id));
+    }, [planet?.id]);
+
+    const toggleFavorite = () => {
+        let favs = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        if (favs.includes(planet.id)) {
+            favs = favs.filter(p => p !== planet.id);
+            setIsFav(false);
+        } else {
+            favs.push(planet.id);
+            setIsFav(true);
+        }
+
+        localStorage.setItem("favorites", JSON.stringify(favs));
+    };
 
     if (!planet) return <h2>Planet not found</h2>;
 
@@ -68,7 +100,6 @@ export default function PlanetPage() {
             {/* HERO */}
             <section className="planet-hero">
 
-                {/* LEFT */}
                 <div className="planet-hero__left">
 
                     <p className="planet-hero__eyebrow">
@@ -87,14 +118,33 @@ export default function PlanetPage() {
                         {planet.description}
                     </p>
 
+                    {/* BUTTONS */}
                     <div className="planet-hero__actions">
-                        <button className="btn btn--primary">
+
+                        {/* 🎧 LISTEN BUTTON */}
+                        <button
+                            className="btn btn--primary"
+                            onClick={() => {
+                                document
+                                    .getElementById("audio-section")
+                                    ?.scrollIntoView({ behavior: "smooth" });
+
+                                setTimeout(() => {
+                                    audioRef.current?.play();
+                                }, 500);
+                            }}
+                        >
                             🔊 Listen to Narration
                         </button>
 
-                        <button className="btn btn--outline">
-                            ⭐ Add to Favorites
+                        {/* ⭐ FAVORITE BUTTON */}
+                        <button
+                            className={`btn btn--outline ${isFav ? "active" : ""}`}
+                            onClick={toggleFavorite}
+                        >
+                            {isFav ? "⭐ Added" : "⭐ Add to Favorites"}
                         </button>
+
                     </div>
 
                     <div className="fun-fact-box">
@@ -104,9 +154,8 @@ export default function PlanetPage() {
 
                 </div>
 
-                {/* RIGHT (PLANET) */}
+                {/* PLANET IMAGE */}
                 <div className="planet-hero__right">
-
                     <div
                         className="planet-display"
                         style={{
@@ -115,7 +164,6 @@ export default function PlanetPage() {
                     >
                         <div className="planet-display__glow"></div>
                     </div>
-
                 </div>
 
             </section>
@@ -151,10 +199,11 @@ export default function PlanetPage() {
             </section>
 
             {/* AUDIO */}
-            <section className="section">
+            <section id="audio-section" className="section">
                 <h2 className="section__title">🔊 Audio Narration</h2>
 
                 <AudioPlayer
+                    ref={audioRef}
                     src={planet.audio}
                     name={planet.name}
                 />

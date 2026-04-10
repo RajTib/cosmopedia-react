@@ -47,7 +47,7 @@ export const PLANETS = [
     color: "#e8c56a",
     glowColor: "#f0a050",
     image: "images/Venus.png",
-    audio: "assets/audios/venus.mp3",
+    audio: "audios/venus.mp3",
     description: `Venus is the second planet from the Sun and the hottest planet in
     our solar system, despite not being the closest to the Sun. Its thick atmosphere
     traps heat in a runaway greenhouse effect. Venus rotates in the opposite direction
@@ -82,7 +82,7 @@ export const PLANETS = [
     color: "#4a9eff",
     glowColor: "#3eca7a",
     image: "images/Earth.png",
-    audio: "assets/audios/earth.mp3",
+    audio: "audios/earth.mp3",
     description: `Earth is the third planet from the Sun and the only known planet
     to harbor life. With its liquid water, breathable atmosphere, and protective
     magnetic field, Earth is uniquely suited for life. It is the densest planet in
@@ -117,7 +117,7 @@ export const PLANETS = [
     color: "#cf4e2a",
     glowColor: "#e05a2b",
     image: "images/Mars.png",
-    audio: "assets/audios/mars.mp3",
+    audio: "audios/mars.mp3",
     description: `Mars is the fourth planet from the Sun and the second-smallest
     planet in the Solar System. Often called the Red Planet due to its reddish
     appearance caused by iron oxide on its surface. Mars has the tallest volcano
@@ -152,7 +152,7 @@ export const PLANETS = [
     color: "#c88b4a",
     glowColor: "#d4784a",
     image: "images/Jupiter.png",
-    audio: "assets/audios/jupiter.mp3",
+    audio: "audios/jupiter.mp3",
     description: `Jupiter is the fifth planet from the Sun and the largest planet
     in the Solar System. It is a gas giant with a mass more than twice that of all
     other planets combined. Jupiter's iconic Great Red Spot is a persistent
@@ -187,7 +187,7 @@ export const PLANETS = [
     color: "#e8d5a0",
     glowColor: "#d4b870",
     image: "images/Saturn.png",
-    audio: "assets/audios/saturn.mp3",
+    audio: "audios/saturn.mp3",
     description: `Saturn is the sixth planet from the Sun and the second-largest
     in the Solar System. It is a gas giant with an average radius of about nine
     and a half times that of Earth. Saturn is known for its spectacular ring system,
@@ -222,7 +222,7 @@ export const PLANETS = [
     color: "#7de8e8",
     glowColor: "#5bc8d0",
     image: "images/Uranus.png",
-    audio: "assets/audios/uranus.mp3",
+    audio: "audios/uranus.mp3",
     description: `Uranus is the seventh planet from the Sun. It is an ice giant
     with the third-largest planetary radius and fourth-largest planetary mass in
     the Solar System. Uranus is unique in that it rotates on its side, with an
@@ -257,7 +257,7 @@ export const PLANETS = [
     color: "#3a6fd8",
     glowColor: "#4488f0",
     image: "images/Neptune.png",
-    audio: "assets/audios/neptune.mp3",
+    audio: "audios/neptune.mp3",
     description: `Neptune is the eighth and farthest known Solar planet from the
     Sun. It is the fourth-largest planet by diameter, the third-most-massive planet,
     and the densest giant planet. Neptune has the strongest winds in the Solar System,
